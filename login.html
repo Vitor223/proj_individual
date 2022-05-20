@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_login.css">
+    <link rel="icon" href="livro.png">
+    <title>GoReads — Login</title>
+</head>
+<body>
+
+   <div class="barra_nav">
+    <img src="livrinho.gif" alt="" class="anima_icon"> <a href="index.html"><span class="menina">GoReads
+    <div class="sub_nav">
+    <ul>
+        <a href="https://pt.stackoverflow.com/questions/41643/d%C3%BAvida-sobre-estiliza%C3%A7%C3%A3o-de-input-submit" ><li class="link_barra">Cadastro</li></a>
+        <li style="color: yellow">Login</li>
+        <a href="" class="link_barra"><li>Novidades</li></a>
+        <a href="" class="link_barra"><li>Calculadora</li></a>
+        <a href="" class="link_barra"><li>Autores</li></a>
+    </ul>
+    </div>
+</div>
+    <div class="corpo">
+        <div class="login">
+            <h1>Faça seu Login aqui</h1>
+            <input type="text" id="email" placeholder="E-mail" class="ipt">
+            <br><br>
+            <input type="password" id="senha" placeholder="senha" class="ipt">
+            <br><br>
+           <a href="https://www.cufonfonts.com/font/morgana-2"><button onclick="faz()" class="btn_vai">Entrar</button></a> 
+            <br>
+            <center><img src="carrega.gif" alt="" id="carrega" style="display: none;"> </center>
+            <br> 
+            <span class="texto_cadas">Você não possui uma conta? <a href="cadastro.html">clique aqui!</a></span>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
+<script>
+    function faz()
+    {
+        carrega.style.display = 'Block';
+    }
+</script>
