@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_cad.css">
+    <link rel="icon" href="img/livro.png">
+    <title>GoReads – Faça Seu Cadastro e Aproveite o site</title>
+</head>
+<body>
+    <div class="barra_nav">
+        <img src="img/livrinho.gif" alt="" class="anima_icon"> <a href="index.html"><span class="menina">GoReads </span></a>
+
+    </div>
+
+    <div class="corpo">
+        <div class="login">
+            <h1>Faça seu Cadastro</h1>
+           <center><input type="text" class="ipt" placeholder="Nome">
+            <br> <br>
+            <input type="text" class="ipt" placeholder="Nome de Usuário">
+            <br> <br>
+            <input type="text" id="email" placeholder="E-mail" class="ipt">
+            <br><br>
+            data de nascimento <br><input type="date" class="ipt">
+            <br> <br>
+            <input type="text" class="ipt" placeholder="Autor Prefirido">
+            <br> <br>
+            <input type="password" id="senha" placeholder="senha" class="ipt">
+            <br><br>
+            <input type="password" class="ipt" placeholder="Confirmar Senha">
+            <br> <br>
+            <center><img src="img/carrega.gif" alt="" id="carrega" style="display: none;"> </center>
+            
+           <a href="login.html"><button onclick="faz()" class="btn_vai">Cadastrar</button></a> 
+            <br>
+             </center> 
+        </div>
+    </div>
+    
+
+    <footer>
+        Desenvolvido Por: <br>
+        Vitor Fernando da Silva Costa
+        <br>RA: 02221058 <br>
+        1°CCO
+    </footer>
+</body>
+</html>
+<script>
+    function faz()
+    {
+        carrega.style.display = 'Block';
+    }
+</script>
