@@ -6,13 +6,14 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-image: url(../img/fundo_login.jpg);
+    background-image: linear-gradient(to bottom right, blue, yellow, blue);
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .barra_nav {
