@@ -1,17 +1,12 @@
+/* intens Inportados */
+
 @import url('http://fonts.cdnfonts.com/css/salter');
 
 @import url('http://fonts.cdnfonts.com/css/promova');
 
 @import url('http://fonts.cdnfonts.com/css/khand');
 
-body {
-    margin: 0%;
-    padding: 0%;
-    background-color: white;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
+/* começo da barra de navegação */
 
 .barra_nav {
     background-color: rgb(22, 22, 207);
@@ -85,60 +80,58 @@ a:hover {
     color: white;
 }
 
-.container {
-    /* margin-top: 10px; */
-    background-image: url(../img/fundo_home.jpg);
-    background-repeat: no-repeat;
-    background-size: 1600px;
-    background-position: 0px -90px;
-    width: 99vw;
-    height: 90vh;
+/* fim da barra de navegação */
+
+/* começo do corpo da pagina */
+body
+{
+    margin: 0%;
+    padding: 0%;
+    /* background-image: linear-gradient(to right, blue, yellow); */
+    overflow-x: hidden;
+
 }
 
-.escurece {
-    background-color: rgba(0, 0, 0, 0.718);
+.container
+{
+    /* margin-top: 10px; */
     width: 99vw;
     height: 90vh;
-    display: flex;
-    flex-direction: column;
+    background-image: url(../img/fundo_sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: 1520px;
+    background-position: 0px -190px;
+   
+    
+}
+
+.escurece
+{
+    
+    width: 99vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.718);
     align-items: center;
+    display: flex;
     justify-content: center;
     color: white;
 }
 
-.fala1 {
+.fala1
+{
     font-size: 200px;
     font-family: 'salter';
 }
 
-.fala2 {
-    font-size: 18px;
-}
-
-.container2 {
-    background-color: rgb(57, 131, 104);
+.container1 {
+    background-color: rgba(54, 54, 54, 0.699);
+    /* margin-top: 60px;
+    margin-bottom: 60px; */
     width: 99vw;
-    height: 75vh;
+    height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-
-}
-
-.div_icon_criador {
-    margin-left: 190px;
-}
-
-.mini_div {
-    width: 15vw;
-    height: 30vh;
-    background-image: url(../img/usu.png);
-    background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: -9px -11px;
-    border-radius: 100%;
-    border: 10px solid rgb(168, 164, 164);
 }
 
 .div_corpo_sobre {
@@ -150,19 +143,61 @@ a:hover {
     font-family: 'khand';
 }
 
+.div_icon_criador {
+    margin-left: 190px;
+}
+
+.mini_div {
+    width: 14vw;
+    height: 29vh;
+    background-image: url(../img/usu.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: -5px -9px;
+    border-radius: 100%;
+    border: 10px solid rgb(168, 164, 164);
+}
+
+
+.container2 {
+    background-color: #7f7fa3;
+    /* margin-top: 60px; */
+    width: 99vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.span_sobre {
+    text-align: center;
+    font-family: 'khand';
+}
+
+.segura_tudo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+
+.segura1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-left: 40px;
+}
 
 .sobre_proj {
     font-family: 'Khand', sans-serif;
     font-size: 20px;
-}
-
-.container1 {
-    background-color: rgba(0, 0, 0, 0.562);
-    width: 99vw;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-
 }
 
 .icon_sob_proj1 {
@@ -173,6 +208,7 @@ a:hover {
     background-image: url(../img/lapis.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -5px;
     
     
 }
@@ -185,7 +221,7 @@ a:hover {
     background-image: url(../img/ideia.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0px -4px;
+    background-position-y: -7px;
 
 }
 
@@ -197,33 +233,6 @@ a:hover {
     background-image: url(../img/engrenagem.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0px -4px;
+    background-position-y: -5px;
 }
-
-
-footer {
-    background-color: rgb(22, 22, 207);
-    height: 12vh;
-    width: 99vw;
-    /* margin-top: 115px; */
-    text-align: center;
-    color: white;
-    font-family: 'promova';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.span_sobre {
-    text-align: center;
-    font-family: 'khand';
-}
-
-.segura1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    margin-left: 40px;
-}
+/* fim do corpo da pagina */
