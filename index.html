@@ -11,27 +11,37 @@
 <body>
 
     <div class="corpo">
+        <h1>Faça seu Login Aqui</h1>
         <div class="login">
             <div class="ver">
                 <br>
-            <h1>Faça seu Login Aqui</h1>
-            <input type="text" id="email" placeholder="E-mail" class="ipt">
+            
+            
+            <input type="text" name="email" id="email"  class="ipt1">
+            <label for="email" class="label_ipt1">E-mail</label>
+            
             <br><br>
-            <input type="password" id="senha" placeholder="senha" class="ipt">
+            
+            <input type="password" name="senha" id="senha" class="ipt2">
+            <label for="senha" class="label_ipt2">Senha</label>
             <br><br>
-           <button onclick="faz()" class="btn_vai">Entrar</button>
+           <button onclick="faz()" class="btn_vai"> ➤</button>
             <br>
-            <center><img src="img/carrega.gif" alt="" id="carrega" style="display: none;"> </center>
+            <img src="img/nezuco.gif" alt="">
             <br> 
             <span class="texto_cadas">Você não possui uma conta? <a href="cadastro.html">clique aqui!</a></span>
+            
         </div>
+        
         </div>
 
     </div>
 
     <div class="corpo2">
-
+      <span style="color:rgb(253, 31, 31)">Go</span>Reads
     </div>
+
+    
 
 
 </body>
@@ -42,6 +52,8 @@
 
     function faz()
     {
+
+
         e =  email.value;
         s = senha.value;
 

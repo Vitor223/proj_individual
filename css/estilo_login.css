@@ -6,59 +6,21 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-image: linear-gradient(to bottom right, blue, yellow, blue);
+    background-image: url(../img/fundo_login.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center; 
+    flex-direction: row;
     overflow-x: hidden;
-}
-
-.barra_nav {
-    background-color: rgb(22, 22, 207);
-    height: 12vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid white;
-
-}
-
-
-
-a {
-    text-decoration: none;
-    transition-duration: 0.3s;
-
-}
-
-a:hover {
-    color: red;
-}
-
-
-
-
-.anima_icon {
-    width: 60px;
-    height: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-
-.menina {
-
-    font-family: 'Salter', sans-serif;
-    font-size: 70px;
-    color: white;
 }
 
 
 .corpo {
-    background-color: rgb(22, 22, 207);
+    background-color: rgb(184, 184, 184);
+    box-shadow: 10px 0px 10px ; 
     text-align: center;
-   border-right: 5px solid white;
     width: 450px;
     height: 100vh;
     display: flex;
@@ -68,38 +30,115 @@ a:hover {
 
 }
 
+.login
+{
+    margin-top: 20px;
+}
+
 .ver
 {
-    background-color: rgba(255, 255, 255, 0.651);
+    background: none;
     width: 300px;
     height: 300px;
     border-radius: 20px;
+    
+    
+    
 }
 
 h1 {
     /* margin-top: 100px; */
     /* margin-bottom: 40px; */
     font-family: 'PROMOVA', sans-serif;
+    top: 0px;
 }
 
-.ipt {
-    border: 1px solid blue;
-    height: 20px;
-    border-radius: 10px;
+.ipt1 {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+     
 }
+
+.ipt2 {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+     
+}
+
+.label_ipt1
+{
+   position: absolute;
+   left: 130px;
+   top: 295px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.ipt1:focus ~ .label_ipt1
+{
+   top: 285px;
+   font-size: 12px;
+}
+
+.label_ipt2
+{
+   position: absolute;
+   left: 130px;
+   top: 350px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.ipt2:focus ~ .label_ipt2
+{
+   top: 340px;
+   font-size: 12px;
+}
+
 
 .btn_vai {
-    background-color: white;
-    border: 1px solid blue;
-    border-radius: 20px;
-    font-size: 15px;
-    width: 75px;
-    height: 30px;
+    background-color: rgb(253, 31, 31);
+    border: none;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    box-shadow: 10px 2px 10px gray;
+    line-height: 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin-top: 100px; */
+    /* margin-bottom: 90px; */
+    font-size: 30px;
+    color: white;
+
 }
 
+.btn_vai:hover{
+    background-color: white;
+    color: black;   
+    transition: 0.6s;
+}
+
+/* .btn_vai:active{
+    color: black;
+} */
 
 .texto_cadas {
-    margin-top: 90px;
+    margin-top: 2000px;
 }
 
 #carrega {
@@ -107,15 +146,26 @@ h1 {
     height: 70px;
 }
 
-footer {
-    background-color: rgb(22, 22, 207);
-    height: 12vh;
-    width: 99vw;
-    margin-top: 115px;
-    text-align: center;
-    color: white;
+.corpo2
+{
+    background-color: rgba(128, 128, 128, 0.764);
+    width: 700px;
+    border-radius: 30px;
+    margin-left: 250px;
     font-family: 'promova';
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 250px;
+    text-align: center;
+    
 }
+
+.carrega
+{
+    align-self: flex-end;
+    background-color: red;
+    width: 1000px;
+    height: 100px;
+    margin-bottom: 70px;
+    
+
+}
+
