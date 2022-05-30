@@ -86,7 +86,7 @@ h1 {
     transition: .5s;
 }
 
-.ipt1:focus ~ .label_ipt1
+.ipt1:focus + .label_ipt1
 {
    top: 285px;
    font-size: 12px;
@@ -151,21 +151,33 @@ h1 {
     background-color: rgba(128, 128, 128, 0.764);
     width: 700px;
     border-radius: 30px;
-    margin-left: 250px;
+    margin-right: 150px;
     font-family: 'promova';
     font-size: 250px;
     text-align: center;
-    
+    justify-self: center;
+    margin-left: 100px;
+    box-shadow: 0 0 5em black;
 }
 
-.carrega
+.coloca
 {
+    height: 80px;
+    width: 200px;
+    background-color: gray;
     align-self: flex-end;
-    background-color: red;
-    width: 1000px;
-    height: 100px;
-    margin-bottom: 70px;
-    
+    margin-bottom: 30px;
+    margin-right: 40px;
+}
+
+#carrega
+{
+   margin-top: 5px;
+    height: 80px;
+    width: 100px;
+    display: none;
 
 }
+
+
 
