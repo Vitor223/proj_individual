@@ -130,8 +130,8 @@ a
 
 #foto_autor
 {
-    width: 185px;
-    height: 252px;
+    width: 163px;
+    height: 219px;
    
 }
 
@@ -216,7 +216,7 @@ a
 
 footer
 {
-    height: 15vh;
+    height: 100px;
     width: 100vw;
     background-color: black;
     margin-top: 80px;

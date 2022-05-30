@@ -130,8 +130,8 @@ a
 
 #foto_autor
 {
-    width: 185px;
-    height: 252px;
+    width: 165px;
+    height: 220px;
    
 }
 
@@ -168,6 +168,7 @@ a
     margin-left: 30px;
     margin-top: 30px;
     font-family: 'Quicksand';
+    font-size: 15px;
 }
 
 .container3
@@ -216,7 +217,7 @@ a
 
 footer
 {
-    height: 15vh;
+    height: 100px;
     width: 100vw;
     background-color: black;
     margin-top: 80px;

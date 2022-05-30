@@ -81,14 +81,14 @@ h1 {
 {
    position: absolute;
    left: 130px;
-   top: 295px;
+   top: 235px;
     pointer-events: none;
     transition: .5s;
 }
 
 .ipt1:focus + .label_ipt1
 {
-   top: 285px;
+   top: 225px;
    font-size: 12px;
 }
 
@@ -96,14 +96,14 @@ h1 {
 {
    position: absolute;
    left: 130px;
-   top: 350px;
+   top: 300px;
     pointer-events: none;
     transition: .5s;
 }
 
 .ipt2:focus ~ .label_ipt2
 {
-   top: 340px;
+   top: 290px;
    font-size: 12px;
 }
 

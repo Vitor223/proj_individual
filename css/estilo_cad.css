@@ -6,57 +6,18 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-image: linear-gradient(to bottom right, blue, yellow, blue);
+    background-image: url(../img/fundo_login.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
 }
 
-.barra_nav {
-    background-color: rgb(22, 22, 207);
-    height: 12vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid white;
-
-}
-
-a {
-    text-decoration: none;
-    transition-duration: 0.3s;
-
-}
-
-a:hover {
-    color: red;
-}
-
-
-
-
-.anima_icon {
-    width: 60px;
-    height: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-
-.menina {
-
-    font-family: 'Salter', sans-serif;
-    font-size: 70px;
-    color: white;
-}
-
 .corpo
 {
-    margin-top: 80px;
+    margin-top: 40px;
     width: 500px;
     height: 40vw;
     background-color: white;
@@ -68,18 +29,19 @@ a:hover {
 }
 
 .ipt {
-    border: 1px solid blue;
+    border: 1px solid black;
     height: 20px;
     border-radius: 10px;
 }
 
 .btn_vai {
     background-color: white;
-    border: 1px solid blue;
+    border: 1px solid black;
     border-radius: 20px;
     font-size: 15px;
     width: 80px;
     height: 30px;
+    justify-self: center;
 }
 
 #carrega {
@@ -90,16 +52,3 @@ a:hover {
 
 
 
-footer {
-    background-color: rgb(22, 22, 207);
-    height: 12vh;
-    width: 99vw;
-    margin-top: 115px;
-    text-align: center;
-    color: white;
-    font-family: 'promova';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 162px;
-}
