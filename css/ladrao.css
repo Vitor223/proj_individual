@@ -95,3 +95,27 @@ a
     background-color: none;
     
 }
+
+.container
+{
+    background-color: rgb(230, 228, 228);
+    width: 98%;
+    height: 450px;
+    border-radius: 40px;
+}
+
+.foto
+{
+    width: 300px;
+    height: 100%;
+    margin-left: 90px;
+    box-shadow: rgba(0, 0, 0, 0.56) 10px 22px 70px 4px;
+    /* border: 2px solid red; */
+}
+
+#fotinha
+{
+    width: 300px;
+    height: 100%;
+    
+}
