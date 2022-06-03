@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_login.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads — Login</title>
+</head>
+<body>
+
+    <div class="corpo">
+        <h1>Faça seu Login Aqui</h1>
+        <div class="login">
+            <div class="ver">
+                <br>
+            
+            
+            <input type="text" id="email" id="email"  class="ipt1">
+            <label for="email" class="label_ipt1">E-mail</label>
+            
+            <br><br>
+            
+            <input type="password" id="senha" id="senha" class="ipt2">
+            <label for="senha" class="label_ipt2">Senha</label>
+            <br><br>
+           <button onclick="faz()" class="btn_vai"> ➤</button>
+            <br>
+           <center><img src="img/carrega.gif" id="carrega" alt=""></center> 
+            <br> 
+            <span class="texto_cadas">Você não possui uma conta? <a href="cadastro.html">clique aqui!</a></span>
+            
+        </div>
+        
+        </div>
+ 
+    </div>
+
+    <div class="corpo2">
+      <span style="color:rgb(253, 31, 31)">Go</span>Reads
+    </div>
+
+
+    
+
+</body>
+</html>
+<script>
+   function faz(){
+       const e = email.value;
+       const s = senha.value;
+
+       if(e == '' || s == ''){
+           console.error("Preencha todos os campos");
+           return false;
+        }
+
+        else if(e.indexOf("@") == -1){
+            alert("Insira um emai valido");
+            return false;
+        }
+
+        else if(s.length < 4)
+        {
+            alert("Senha deve ter pelo menos 4 caracteres!");
+           return false;
+        }
+
+        else{
+
+            fetch("/usuario/entrar", {
+                method: "POST",
+                headers: {
+                    "content-type" : "application/json"
+                },
+
+                body: JSON.stringify({
+                    
+                    emailServer: e,
+                    senhaServer: s
+                })
+            })
+
+            .then(function(resposta){
+                if(resposta.ok){
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.idusu;
+                        sessionStorage.NICK = json.nome_usu;
+
+                        window.location = "home.html";
+                    });
+                }
+                else{
+                    console.log("houve um erro ao tentar o logn!");
+
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            })
+            .catch(function(erro){
+                console.log(erro);
+            });
+
+            return false;
+        }
+
+
+
+   }
+</script>

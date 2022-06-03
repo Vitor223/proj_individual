@@ -1,0 +1,54 @@
+@import url('http://fonts.cdnfonts.com/css/salter');
+
+@import url('http://fonts.cdnfonts.com/css/promova');
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-image: url(../img/fundo_login.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.corpo
+{
+    margin-top: 40px;
+    width: 500px;
+    height: 40vw;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ipt {
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.btn_vai {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    justify-self: center;
+}
+
+#carrega {
+    width: 80px;
+    height: 50px;
+}
+
+
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_cad.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads – Faça Seu Cadastro e Aproveite o site</title>
+</head>
+<body>
+   
+
+    <div class="corpo">
+        <h1>Faça seu Cadastro</h1>
+
+        <div class="login">
+           <input type="text" id="nome" class="ipt" >
+            <label for="nome">Nome Completo</label>
+            <br> <br>
+            <input type="text" id="usuario" class="ipt">
+            <label for="usuario">Nome de Usuario</label>
+            <br> <br>
+            <input type="text" id="email" id="email"  class="ipt">
+            <label for="email">Email</label>
+            <br><br>
+            data de nascimento <br><input id="dataNasc" type="date" class="ipt">
+            <br> <br>
+            <input type="text" id="autor_favorito" class="ipt">
+            <label for="autor_favorito">Autor Preferido</label>
+            <br> <br>
+            <input type="password" id="senha" id="senha" class="ipt">
+           <label for="senha">Senha</label>
+            <br><br>
+            <input type="password" id="confirma" class="ipt">
+            <label for="confirma">Confirmar senha</label>
+            <br> <br>
+            <center><img src="img/carrega.gif" alt="" id="carrega" style="display: none;"> </center>
+            
+           <a href="index.html"><button onclick="faz()" class="btn_vai">Cadastrar</button></a> 
+            <br>
+              
+        </div>
+    </div>
+    
+
+   
+</body>
+</html>
+<script>
+    function faz()
+    {
+        
+       
+        if(nome.value == '' || usuario.value == '' || email.value == ''
+         || dataNasc.value == '' || autor_favorito.value == '' || senha.value == '')
+         {
+             alert("Preencha todos os campos!");
+         }
+
+         else if(email.value.indexOf('@') == -1)
+         {
+             alert("Insira um email valido");
+         }
+
+         else if(senha.value.lenght > 14)
+         {
+             alert("Insira uma senha menor");
+         }
+
+         else if(senha.value.lenght < 4)
+         {
+             alert("A senha precisa ter pelo menos 4 caracteres");
+         }
+
+         else if (senha.value != confirma.value)
+         {
+             alert("A confirmação de senha esta incorreta!");
+         }
+
+         else
+         {
+             fetch("/usuario/cadastrar", {
+                 method: "POST",
+
+                 headers: {
+
+                    "Content-type" : "application/json"
+
+                 },
+
+                 body: JSON.stringify({
+
+                    nomeServer: nome.value,
+                    usuarioServer: usuario.value,
+                    emailServer: email.value,
+                    dataServer: dataNasc.value,
+                    autorServer: autor_favorito.value,
+                    senhaServer: senha.value
+
+                 })
+             })
+
+             .then(function(resposta){
+                 if(resposta.ok){
+                     resposta.json().then(json => {
+                         console.log(json);
+                         console.log(JSON.stringify(json));
+
+
+                         carrega.style.display = 'Block';
+                         window.location = 'index.html';
+                     });
+                 }
+
+                 else{
+
+                    console.log("Houve um erro ao tentar realizar o cadastro!");
+
+                    resposta.text().then(texto => {
+
+                        console.error(texto);
+                        if(texto.indexOf("Duplicate entry") != -1){
+
+                            alert("Já existe um usuário com esse nome de Usuario ou e-mail! Por Favor, Insira outro!");
+                        }
+
+                        else{
+
+                            console.error(texto);
+                        }
+                    });
+                 }
+             })
+
+             .catch(function(erro){
+                 console.log(erro)
+
+             });
+
+             return false;
+         }
+
+    }
+</script>

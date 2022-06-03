@@ -1,0 +1,183 @@
+@import url('http://fonts.cdnfonts.com/css/salter');
+
+@import url('http://fonts.cdnfonts.com/css/promova');
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-image: url(../img/fundo_login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+
+.corpo {
+    background-color: rgb(184, 184, 184);
+    box-shadow: 10px 0px 10px ; 
+    text-align: center;
+    width: 450px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login
+{
+    margin-top: 20px;
+}
+
+.ver
+{
+    background: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    
+    
+    
+}
+
+h1 {
+    /* margin-top: 100px; */
+    /* margin-bottom: 40px; */
+    font-family: 'PROMOVA', sans-serif;
+    top: 0px;
+}
+
+.ipt1 {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+     
+}
+
+.ipt2 {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+     
+}
+
+.label_ipt1
+{
+   position: absolute;
+   left: 130px;
+   top: 235px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.ipt1:focus + .label_ipt1
+{
+   top: 225px;
+   font-size: 12px;
+}
+
+.label_ipt2
+{
+   position: absolute;
+   left: 130px;
+   top: 300px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.ipt2:focus ~ .label_ipt2
+{
+   top: 290px;
+   font-size: 12px;
+}
+
+
+.btn_vai {
+    background-color: rgb(253, 31, 31);
+    border: none;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    box-shadow: 10px 2px 10px gray;
+    line-height: 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin-top: 100px; */
+    /* margin-bottom: 90px; */
+    font-size: 30px;
+    color: white;
+
+}
+
+.btn_vai:hover{
+    background-color: white;
+    color: black;   
+    transition: 0.6s;
+}
+
+/* .btn_vai:active{
+    color: black;
+} */
+
+.texto_cadas {
+    margin-top: 2000px;
+}
+
+#carrega {
+    width: 100px;
+    height: 70px;
+}
+
+.corpo2
+{
+    background-color: rgba(128, 128, 128, 0.764);
+    width: 700px;
+    border-radius: 30px;
+    margin-right: 150px;
+    font-family: 'promova';
+    font-size: 250px;
+    text-align: center;
+    justify-self: center;
+    margin-left: 100px;
+    box-shadow: 0 0 5em black;
+}
+
+.coloca
+{
+    height: 80px;
+    width: 200px;
+    background-color: gray;
+    align-self: flex-end;
+    margin-bottom: 30px;
+    margin-right: 40px;
+}
+
+#carrega
+{
+   margin-top: 5px;
+    height: 80px;
+    width: 100px;
+    display: none;
+
+}
+
+
+

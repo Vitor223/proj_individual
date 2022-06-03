@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/livros_taylor.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads – Informações sobre o Livro Daisy Jones and The Six: Uma história de amor e música</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra_nav">
+            <div class="div_cinza">
+                <a href="home.html"><img src="img/foto_barra.png" alt="" class="anima_icon"> </a>
+            </div>
+
+            <div class="sub_nav">
+                <ul>
+
+                    <li><a href="" class="link_barra">Novidades</a></li>
+
+
+                    <li><a href="" class="link_barra">Quero Comprar</a></li>
+
+
+                    <li><a href="autores.html" class="link_barra">Autores</a></li>
+
+
+                    <li><a href="sobre.html" class="link_barra">Sobre</a></li>
+
+                </ul>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="foto">
+            <img src="img/daisy.jpg" id="fotinha" alt="">
+
+        </div>
+        <div class="infos"><b>Título: </b>Daisy Jones and The Six: Uma história de amor e música. <br><br>
+            <b>Ano de Publicação: </b> 10/06/2019. <br> <br>
+            <b>Editora: </b>Paralela. <br><br>
+            <b>Número de Páginas: </b> 360. <br><br>
+            <b>Sinopse: </b>Todo mundo conhece Daisy Jones & The Six. Nos anos setenta, dominavam as paradas de sucesso,
+            faziam shows para plateias lotadas e conquistavam milhões de fãs. Eram a voz de uma geração, e Daisy, a
+            inspiração de toda garota descolada. Mas no dia 12 de julho de 1979, no último show da turnê Aurora, eles se
+            separaram. E ninguém nunca soube por quê. Até agora.
+            Esta é história de uma menina de Los Angeles que sonhava em ser uma estrela do rock e de uma banda que
+            também almejava seu lugar ao sol. E de tudo o que aconteceu ― o sexo, as drogas, os conflitos e os dramas ―
+            quando um produtor apostou (certo!) que juntos poderiam se tornar lendas da música.
+        </div>
+        <button id="btn_curte" onclick="curte()"><img src="img/coracao_vazio.png" alt="" id="img_curte"></button>
+        <br>
+        <button id="btn_desurte" onclick="desurte()"><img src="img/coracao_cheio.png" alt="" id="img_curte"></button>
+    </div>
+
+    <div class="container2">
+        <h1>Personagens Principais</h1>
+        <div class="segura">
+            <div class="personagem">
+                <img src="https://assets.mycast.io/characters/daisy-jones-4569461-normal.jpg?1641389683" alt=""
+                    class="fotinha">
+                <div class="nome"><b>Daisy Jones</b></div>
+            </div>
+            <div class="personagem">
+                <img src="https://assets.mycast.io/characters/billy-dune-4577460-normal.jpg?1641389783" alt=""
+                    class="fotinha">
+                <div class="nome"><b>Billy Dunne</b></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container3">
+        <h1>Links Para a Compra</h1>
+        <div class="escurece">
+            <span class="joga"><b>Amazon: </b> <a
+                    href="https://www.amazon.com.br/Daisy-Jones-Six-hist%C3%B3ria-m%C3%BAsica/dp/8584391401/ref=asc_df_8584391401/?tag=googleshopp00-20&linkCode=df0&hvadid=379773314816&hvpos=&hvnetw=g&hvrand=642186687345736160&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001767&hvtargid=pla-810039587482&psc=1">
+                    <u style="color:blue;">Clique aqui</u></a></span> <br>
+            <span class="joga"><b>Americanas: </b> <a
+                    href="https://www.americanas.com.br/produto/134289735?epar=bp_pl_00_go_lia_pmax_pegue_loja&sellerId=33014556000196&opn=YSMESP&gclid=Cj0KCQjwnNyUBhCZARIsAI9AYlEvHIstebhTylFp0R97MIbrx4_OhhcmT6m0IddgKK6VjMk0X1NmfSkaAtrhEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+            <span class="joga"><b>Submarino: </b><a
+                    href="https://www.submarino.com.br/produto/134289735?epar=bp_pl_px_go_pmax_livros_geral_1p&opn=XMLGOOGLE&WT.srch=1&offerId=5cefe6566d4819e8b1f62026&gclid=Cj0KCQjwnNyUBhCZARIsAI9AYlEYCSKXZV_YLWKmZscfF6cX105b1jHalX6Dw_jLiD8yn3eVTEvpovUaAkskEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+
+        </div>
+    </div>
+
+    <footer>
+        <br>
+        Desenvolvido Por:
+        Vitor Fernando da Silva Costa <br>
+        RA: 02221058 <br>
+        1°CCO
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function curte() {
+        btn_curte.style.display = 'none';
+        btn_desurte.style.display = 'flex';
+    }
+
+    function desurte() {
+        btn_curte.style.display = 'Flex';
+        btn_desurte.style.display = 'none';
+    }
+</script>
