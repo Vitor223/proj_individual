@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/batalha_labirinto.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads – Informações sobre o Livro A Batalha Do Labirinto</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra_nav">
+            <div class="div_cinza">
+                <a href="home.html"><img src="img/foto_barra.png" alt="" class="anima_icon"> </a>
+            </div>
+
+            <div class="sub_nav">
+                <ul>
+
+                    <li><a href="novidades.html" class="link_barra">Novidades</a></li>
+
+
+                    <li><a href="calc.html" class="link_barra">Quero Comprar</a></li>
+
+
+                    <li><a href="autores.html" class="link_barra">Autores</a></li>
+
+
+                    <li><a href="sobre.html" class="link_barra">Sobre</a></li>
+
+                </ul>
+            </div>
+            <a href="pag_usu.html"><img src="img/icone_barra.png" alt="" class="ico_barra"></a>
+    </header>
+
+    <div class="container">
+        <div class="foto">
+            <img src="img/batalha_labirinto.jpg" id="fotinha" alt="">
+
+        </div>
+        <div class="infos"><b>Título: </b>Percy Jackson e A Batalha do Labirinto. <br><br>
+            <b>Ano de Publicação: </b> 08/05/2008. <br> <br>
+            <b>Editora: </b>Intrínseca. <br><br>
+            <b>Número de Páginas: </b> 392. <br><br>
+            <b>Sinopse: </b>O Monte Olimpo está em perigo. Cronos, o perverso titã que foi destronado e feito em pedaços
+            pelos doze deuses olimpianos, prepara um retorno triunfal. O primeiro passo de suas tropas será atacar e
+            destruir o campo de treinamento dos heróis, filhos de deuses com mortais, que desde a Grécia Antiga combatem
+            na linha de frente em defesa dos olimpianos.Para assegurar que o refúgio de semideuses, o Acampamento
+            Meio-Sangue, não seja invadido, Percy Jackson, Tyson, Annabeth e Grover são destacados para uma importante
+            missão: deter as forças de Cronos antes que se aproximem do acampamento, no emaranhado de corredores do
+            temido Labirinto de Dédalo – um interminável universo subterrâneo que, a cada curva, revela as mais
+            aterrorizantes surpresas.
+        </div>
+        <button id="btn_curte" onclick="curte()"><img src="img/coracao_vazio.png" alt="" id="img_curte"></button>
+        <br>
+        <button id="btn_desurte" onclick="desurte()"><img src="img/coracao_cheio.png" alt="" id="img_curte"></button>
+    </div>
+
+    <div class="container2">
+        <h1>Personagens Principais</h1>
+        <div class="segura">
+            <div class="personagem">
+                <img src="img/Percy.png"
+                    alt="" class="fotinha">
+                <div class="nome"><b>Percy Jackson</b></div>
+            </div>
+            <div class="personagem">
+                <img src="img/Annabeth_Chase.png"
+                    alt="" class="fotinha">
+                <div class="nome"><b>Annabeth Chase</b></div>
+            </div>
+            <div class="personagem">
+                <img src="img/groover.jpg" alt="" class="fotinha">
+                <div class="nome"><b>Groover Underwood</b></div>
+            </div>
+            <div class="personagem">
+                <img src="img/tyson.png"
+                    alt="" class="fotinha">
+                <div class="nome"><b>Tyson</b></div>
+            </div>
+            <div class="personagem">
+                <img src="img/nico.png"
+                    alt="" class="fotinha">
+                <div class="nome"><b>Nico di Angelo</b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container3">
+        <h1>Links Para a Compra</h1>
+        <div class="escurece">
+            <span class="joga"><b>Amazon: </b> <a
+                    href="https://www.amazon.com.br/Batalha-do-Labirinto-Rick-Riordan/dp/8598078700">
+                    <u style="color:blue;">Clique aqui</u></a></span> <br>
+            <span class="joga"><b>Americanas: </b> <a
+                    href="https://www.americanas.com.br/produto/120120373?epar=bp_pl_00_go_livro_pmax_geral_1p&opn=YSMESP&WT.srch=1&offerId=620aadd0d9fd6edeecc0d85f&gclid=Cj0KCQjw-daUBhCIARIsALbkjSbDgzAJ74s7EuUHLDXHxjVakCnrLgKws4VVUrBjo91SPYYmoU0iu2kaAoY-EALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+            <span class="joga"><b>Submarino: </b><a
+                    href="https://www.submarino.com.br/produto/120120373?epar=bp_pl_px_go_pmax_livros_geral_3p&opn=XMLGOOGLE&WT.srch=1&offerId=620aadcf90c85550375f8f91&gclid=Cj0KCQjw-daUBhCIARIsALbkjSZXJxr9TMjVwJKMzw7BqcFeRm6gzt7lsyNf9s3TX5AH2HAUvWlhy9YaArUQEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+
+        </div>
+    </div>
+
+    <footer>
+        <br>
+        Desenvolvido Por:
+        Vitor Fernando da Silva Costa <br>
+        RA: 02221058 <br>
+        1°CCO
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function curte() {
+        btn_curte.style.display = 'none';
+        btn_desurte.style.display = 'flex';
+    }
+
+    function desurte() {
+        btn_curte.style.display = 'Flex';
+        btn_desurte.style.display = 'none';
+    }
+</script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/livros_babi.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads – Informações sobre o Livro Allegro em Hip Hop</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra_nav">
+            <div class="div_cinza">
+                <a href="home.html"><img src="img/foto_barra.png" alt="" class="anima_icon"> </a>
+            </div>
+
+            <div class="sub_nav">
+                <ul>
+
+                    <li><a href="novidades.html" class="link_barra">Novidades</a></li>
+
+
+                    <li><a href="calc.html" class="link_barra">Quero Comprar</a></li>
+
+
+                    <li><a href="autores.html" class="link_barra">Autores</a></li>
+
+
+                    <li><a href="sobre.html" class="link_barra">Sobre</a></li>
+
+                </ul>
+            </div>
+            <a href="pag_usu.html"><img src="img/icone_barra.png" alt="" class="ico_barra"></a>
+    </header>
+
+    <div class="container">
+        <div class="foto">
+            <img src="img/hip_hop.jpg" id="fotinha" alt="">
+
+        </div>
+        <div class="infos"><b>Título: </b>Allegro em hip-hop. <br><br>
+            <b>Ano de Publicação: </b> 10/08/2018. <br> <br>
+            <b>Editora: </b>Gutenberg. <br><br>
+            <b>Número de Páginas: </b> 304. <br><br>
+            <b>Sinopse: </b>No segundo livro da série Cidade da Música, você vai conhecer Camila. Ela é neta de japoneses e filha de pais muito rigorosos que têm grandes planos para ela e para sua irmã. Desde pequena, aprendeu que precisava se esforçar mais, que precisava ser melhor, que não existia tempo a perder na adolescência e que sua inteligência e seu talento deveriam levá-la longe. Camila, então, trocou as festas das amigas por treinos de balé, e a vontade de viajar o mundo afora pela consagrada Academia Margereth Vilela. Sua vida inteira estava programada e organizada. Até que uma crise de ansiedade a fez perceber que tudo ainda podia mudar e, depois de conhecer Vitor, um garoto desengonçado e cheio de sardas que tocava violino, a vida mostrou à Camila que uma dose de hiphop poderia fazer os dias dela mais felizes.
+        </div>
+        <button id="btn_curte" onclick="curte()"><img src="img/coracao_vazio.png" alt="" id="img_curte"></button>
+        <br>
+        <button id="btn_desurte" onclick="desurte()"><img src="img/coracao_cheio.png" alt="" id="img_curte"></button>
+    </div>
+
+    <div class="container2">
+        <h1>Personagens Principais</h1>
+        <div class="segura">
+            <div class="personagem">
+                <img src="img/camila.jpg" alt="" class="fotinha">
+                <div class="nome"><b>Camila</b></div>
+            </div>
+            <div class="personagem">
+                <img src="img/vitor.jpg" alt="" class="fotinha">
+                <div class="nome"><b>Vitor</b></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container3">
+        <h1>Links Para a Compra</h1>
+        <div class="escurece">
+            <span class="joga"><b>Amazon: </b> <a
+                    href="https://www.amazon.com.br/Allegro-em-Hip-Hop-Babi-Dewet/dp/8582355335/ref=pd_bxgy_img_sccl_1/130-8690940-3898913?pd_rd_w=wrnMn&content-id=amzn1.sym.9bd99784-960d-4d00-9e8a-f297f2e2fe83&pf_rd_p=9bd99784-960d-4d00-9e8a-f297f2e2fe83&pf_rd_r=N9HNGD54AQ5NJDKHZT50&pd_rd_wg=sRYIJ&pd_rd_r=1fc1540c-cdc5-4614-9c62-83acd0ac9c79&pd_rd_i=8582355335&psc=1">
+                    <u style="color:blue;">Clique aqui</u></a></span> <br>
+            <span class="joga"><b>Americanas: </b> <a
+                    href="https://www.americanas.com.br/produto/1747091473?epar=bp_pl_00_go_livro_pmax_geral_1p&opn=YSMESP&WT.srch=1&offerId=606b4f320c070442664b007f&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV7P8SJRinjGDnsSLv-uElwwuaPZFfmOk69L_Wz74E2icZ3XQHBdjKkaAnYzEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+            <span class="joga"><b>Submarino: </b><a
+                    href="https://www.submarino.com.br/produto/1747091473?epar=bp_pl_px_go_pmax_livros_geral_1p&opn=XMLGOOGLE&WT.srch=1&offerId=606b4f500fff249a32da6d3b&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV44vk_rE2vAucl8yM6Wz6DZ5wrXvkyzVaACZA-yHz3hf72sbZxrsPQaAr6gEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+
+        </div>
+    </div>
+
+    <footer>
+        <br>
+        Desenvolvido Por:
+        Vitor Fernando da Silva Costa <br>
+        RA: 02221058 <br>
+        1°CCO
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function curte() {
+        btn_curte.style.display = 'none';
+        btn_desurte.style.display = 'flex';
+    }
+
+    function desurte() {
+        btn_curte.style.display = 'Flex';
+        btn_desurte.style.display = 'none';
+    }
+</script>

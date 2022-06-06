@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_novidades.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads — Veja as Novidades No mundo da Literatura</title>
+</head>
+<body>
+    
+    <header>
+        <div class="barra_nav">
+                <div class="div_cinza">
+                    <a href="home.html"><img src="img/foto_barra.png" alt="" class="anima_icon"> </a>
+                </div>
+                
+                <div class="sub_nav">
+                    <ul>
+                        
+                            <li><a href="novidades.html" class="link_barra">Novidades</a></li>
+                        
+    
+                            <li><a href="calc.html" class="link_barra">Quero Comprar</a></li>
+                        
+                        
+                            <li><a href="autores.html" class="link_barra">Autores</a></li>
+    
+                        
+                            <li><a href="sobre.html" class="link_barra">Sobre</a></li>
+                        
+                    </ul>
+                </div>
+                <a href="pag_usu.html"><img src="img/icone_barra.png" alt="" class="ico_barra"></a>
+        </div>
+        
+            </header>
+
+            <h1>Princpais Novidades no Mundo da Literatura</h1>
+
+           <div class="slider">
+               <div class="slides">
+                   <!-- botões inicio -->
+
+                   <input type="radio" name="radio-btn" id="radio1">
+                   <input type="radio" name="radio-btn" id="radio2">
+                   <input type="radio" name="radio-btn" id="radio3">
+
+                   <!-- botões fim -->
+
+                   <!-- imagens dos slides -->
+
+                   <div class="slide first">
+                       <a href="https://www.omelete.com.br/percy-jackson-2/percy-jackson-elenco-adulto"><img src="img/noticia1.jpg" alt=""/></a>
+                       
+                      
+                   </div>
+
+                   <div class="slide">
+                    <a href="https://oquartonerd.com.br/06-10-2021-taylor-jenkins-reid-anuncia-novo-livro-para-2022/"><img src="img/noticia2.jpg"  alt=""/></a>
+                   </div>
+
+                   <div class="slide">
+                    <a href="https://www.omelete.com.br/jogos-vorazes-hunger-games/a-cantiga-dos-passaros-e-das-serpentes-2022"><img src="img/noticia3.png" alt=""/></a>
+                   </div>
+
+                   <!-- bolinha de navegação -->
+                   <div class="navigation-auto">
+                       <div class="auto-btn1"></div>
+                       <div class="auto-btn2"></div>
+                       <div class="auto-btn3"></div>
+                   </div>
+               </div>
+
+               <div class="manual-navigation">
+                   <label for="radio1" class="maunal-btn"></label>
+                   <label for="radio2" class="maunal-btn"></label>
+                   <label for="radio3" class="maunal-btn"></label>
+               </div>
+           </div>
+ 
+           <footer>
+            <br>
+            Desenvolvido Por:
+            Vitor Fernando da Silva Costa <br>
+            RA: 02221058 <br>
+            1°CCO
+        </footer>
+    
+</body>
+</html>
+<script>
+    
+    let count = 1;
+
+    document.getElementById("radio1").checked = true;
+
+    setInterval(function(){
+     nextImage();
+    }, 5000)
+
+    function nextImage(){
+        count ++;
+
+        if(count > 3)
+        {
+          count = 1;
+        }
+
+        document.getElementById("radio"+count).checked = true;
+    }
+</script>

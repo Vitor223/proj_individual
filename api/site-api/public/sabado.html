@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/livros_babi.css">
+    <link rel="icon" href="img/icone.png">
+    <title>GoReads – Informações sobre o Livro Sábado a Noite</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra_nav">
+            <div class="div_cinza">
+                <a href="home.html"><img src="img/foto_barra.png" alt="" class="anima_icon"> </a>
+            </div>
+
+            <div class="sub_nav">
+                <ul>
+
+                    <li><a href="novidades.html" class="link_barra">Novidades</a></li>
+
+
+                    <li><a href="calc.html" class="link_barra">Quero Comprar</a></li>
+
+
+                    <li><a href="autores.html" class="link_barra">Autores</a></li>
+
+
+                    <li><a href="sobre.html" class="link_barra">Sobre</a></li>
+
+                </ul>
+            </div>
+            <a href="pag_usu.html"><img src="img/icone_barra.png" alt="" class="ico_barra"></a>
+    </header>
+
+    <div class="container">
+        <div class="foto">
+            <img src="img/sabado.jpg" id="fotinha" alt="">
+
+        </div>
+        <div class="infos"><b>Título: </b>Sabado a Noite. <br><br>
+            <b>Ano de Publicação: </b> 01/06/2012. <br> <br>
+            <b>Editora: </b>Generale. <br><br>
+            <b>Número de Páginas: </b> 344. <br><br>
+            <b>Sinopse: </b>Esta é a história de um amor jovem, verdadeiro e conflitante. Amanda é a garota mais bonita
+            do colégio - e também a mais popular -, e seu melhor amigo faz de tudo para arranjar encrenca e só anda com
+            os maus elementos do pedaço: os marotos. Por causa de um trabalho de Artes, Amanda acaba descobrindo que ela
+            não é quem sempre achou que fosse. Ser a menina mais desejada talvez não seja tão bom assim...Tudo ao seu
+            redor começa a desmoronar quando uma paixão mal- resolvida volta à tona e sua lealdade é posta à prova.
+            Seria um garoto mais importante que uma amiga? Como se não bastasse, o diretor da escola resolve promover
+            bailes aos sábados e convida uma misteriosa banda mascarada para tocar. Os músicos, além de muito
+            talentosos, conseguem mexer com todos, até mesmo com Amanda e suas melhores amigas. Quanto mistério para um
+            simples baile! Mas, as letras das músicas cantadas pela misteriosa banda dizem muito sobre ela e seus
+            amores... Como poderiam os músicos saber de tudo aquilo? Afinal, quem eram os mascarados de Sábado à Noite?
+        </div>
+        <button id="btn_curte" onclick="curte()"><img src="img/coracao_vazio.png" alt="" id="img_curte"></button>
+        <br>
+        <button id="btn_desurte" onclick="desurte()"><img src="img/coracao_cheio.png" alt="" id="img_curte"></button>
+    </div>
+
+    <div class="container2">
+        <h1>Personagens Principais</h1>
+        <div class="segura">
+            <div class="personagem">
+                <img src="img/amanda.jpg" alt="" class="fotinha">
+                <div class="nome"><b>Amanda</b></div>
+            </div>
+            <div class="personagem">
+                <img src="img/daniel.jpg" alt="" class="fotinha">
+                <div class="nome"><b>Daniel</b></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container3">
+        <h1>Links Para a Compra</h1>
+        <div class="escurece">
+            <span class="joga"><b>Amazon: </b> <a
+                    href="https://www.amazon.com.br/S%C3%A1bado-%C3%A0-noite-Babi-Dewet/dp/8563993380/ref=asc_df_8563993380/?tag=googleshopp00-20&linkCode=df0&hvadid=379804832084&hvpos=&hvnetw=g&hvrand=15151185451208132830&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001767&hvtargid=pla-809614581773&psc=1">
+                    <u style="color:blue;">Clique aqui</u></a></span> <br>
+            <span class="joga"><b>Americanas: </b> <a
+                    href="https://www.americanas.com.br/produto/116582250?epar=bp_pl_00_go_livro_pmax_geral&opn=YSMESP&WT.srch=1&offerId=61de94e8d9fd6edeec5b22da&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV6S8nlYnYu7-AfiWe7d4uA1MpR1y9XdF26FAFZ3QRBUtWQRNlW5QQEaAh9XEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+            <span class="joga"><b>Submarino: </b><a
+                    href="https://www.submarino.com.br/produto/116582250?epar=bp_pl_px_go_pmax_livros_geral_3p&opn=XMLGOOGLE&WT.srch=1&offerId=61de94e890c85550375b2d6f&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV51yYFy8rzqSjEaaxv0fn1CjW4_tjS0FebYsrIHE2R-qervWPFv4N4aAnzzEALw_wcB"><u
+                        style="color: blue;">Clique aqui</u></a></span><br>
+
+        </div>
+    </div>
+
+    <footer>
+        <br>
+        Desenvolvido Por:
+        Vitor Fernando da Silva Costa <br>
+        RA: 02221058 <br>
+        1°CCO
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function curte() {
+        btn_curte.style.display = 'none';
+        btn_desurte.style.display = 'flex';
+    }
+
+    function desurte() {
+        btn_curte.style.display = 'Flex';
+        btn_desurte.style.display = 'none';
+    }
+</script>

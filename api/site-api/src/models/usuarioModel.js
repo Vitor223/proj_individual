@@ -1,0 +1,44 @@
+const database = require("../database/config");
+
+function entrar(email, senha){
+    console.log(`Acessei o usuarioModel. Function entrar(${email}, ${senha})`);
+    const comando = `SELECT * FROM Usuario WHERE email = '${email}' AND senha = '${senha}'`;
+    
+    console.log(`Executando a instrução SQL: ${comando}`);
+    return database.executar(comando);
+}
+
+function cadastrar(nome, usu, email, data, autor_fav, senha){
+    console.log(`Acessei o usuarioModel. Function cadastrar(${nome}, ${usu}, ${email}, ${data}, ${autor_fav}, ${senha}`);
+    const comando = `INSERT INTO Usuario (nome_completo, nome_usu, autor_fav, email, dataNasc, senha) VALUES ('${nome}', '${usu}', '${autor_fav}', '${email}', '${data}', '${senha}')`;
+    
+    console.log(`Executando a instrução SQL: ${comando}`);
+    return database.executar(comando);
+}
+
+function curtir(){
+    console.log(`Acessei o usuarioModel. function curtir()`)
+}
+
+function atualizar(nome, nick, email, idUsuario){
+    console.log(`Acessei o usuarioModel. Function atualizar(${nome}, ${nick}, ${email})`);
+    const comando = `UPDATE Usuario SET nome = '${nome}', nick = '${nick}', email = '${email}' WHERE idUsuario = ${idUsuario}`;
+    
+    console.log(`Executando a instrução SQL: ${comando}`);
+    return database.executar(comando);
+}
+
+function sugerir(jogo, categoria, idUsuario){
+    console.log(`Acessei o usuarioModel. Function sugerir(${jogo}, ${categoria}, ${idUsuario})`);
+    const comando = `INSERT INTO JogoSugerido (nome, categoria, fkUsuario) VALUES ('${jogo}', '${categoria}', ${idUsuario})`;
+    
+    console.log(`Executando a instrução SQL: ${comando}`);
+    return database.executar(comando);
+}
+
+module.exports = {
+    entrar,
+    cadastrar,
+    atualizar,
+    sugerir
+}
