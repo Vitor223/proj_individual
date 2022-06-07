@@ -30,9 +30,11 @@
 
     <div class="container2">
         <div class="curte">
-            <center>
+            
                 <h1>Obras Curtidas</h1>
-            </center>
+            
+
+            <span id="mostra"></span>
 
         </div>
         <div class="indica">
@@ -86,4 +88,37 @@
 nome_usu.innerHTML = sessionStorage.NICK;
 nome.innerHTML = sessionStorage.NOME_USUARIO;
 fav.innerHTML = sessionStorage.AUTOR;
+</script>
+
+<script>
+     fetch(`usuario/mostra?idusu=${sessionStorage.ID_USUARIO}`)
+    
+
+.then(function(res){
+    
+    if(res.ok)
+    {
+        // console.log(res.json(mostra));
+
+        res.json().then(function(resposta){
+
+            for (let contador = 0; contador < resposta.length; contador++) {
+               mostra.innerHTML += `<p>${resposta[contador].nome}<br></p>`;
+                
+            }
+            console.log(resposta);
+            
+        })
+    }
+
+    else
+    {
+        console.error("nenhum dado encontrado!");
+    }
+})
+
+.catch(function(erro){
+
+    console.error("Erro ao capturar dado: " + erro.message)
+})
 </script>

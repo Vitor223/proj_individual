@@ -206,6 +206,24 @@ function mede(req, res){
 
 }
 
+function mostra(req, res){
+    const usu = req.query.idusu;
+
+    if(usu == undefined)
+    {
+        res.status(400).send("Id do usuario não encontrado");
+    }
+    usuarioModel.mostra(usu)
+    .then((resultado) => {
+        res.json(resultado);
+    })
+    .catch((erro) =>{
+        console.log(erro);
+        console.log(`Houve um erro ao mostrar Erro: ${erro.sqlMessage}`);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
     entrar,
     cadastrar,
@@ -214,5 +232,6 @@ module.exports = {
     verificar_curtir,
     curtir,
     descurtir,
-    mede
+    mede,
+    mostra
 }

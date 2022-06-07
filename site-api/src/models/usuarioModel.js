@@ -62,6 +62,12 @@ function mede(){
     return database.executar(comando);
 }
 
+function mostra(usu){
+    console.log("Acessei o usuarioModel. function mostra");
+    const comando = `select nome from livro, curtir, usuario where idUsuario = ${usu} and fkusu = idUsuario and fkLivro = idLivro;`;
+    return database.executar(comando);
+}
+
 module.exports = {
     entrar,
     cadastrar,
@@ -70,5 +76,6 @@ module.exports = {
     verificar_curtir,
     curtir,
     descurtir,
-    mede
+    mede,
+    mostra
 }

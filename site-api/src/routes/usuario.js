@@ -36,5 +36,9 @@ router.get("/mede", function(req,res){
     usuarioController.mede(req,res)
 }) 
 
+router.get("/mostra", function(req,res){
+    usuarioController.mostra(req,res)
+})
+
 module.exports = router;
 
