@@ -135,9 +135,69 @@ function sugerir(req, res){
     }
 }
 
+function verificar_curtir(req, res){
+    const usu = req.query.idUsu;
+    
+    if(usu == undefined)
+    {
+        res.status(400).send("Id do usuario não encontrado");
+    }
+
+    else
+    {
+        usuarioModel.verificar_curtir(usu)
+        .then((resultado) => {
+            res.json(resultado);
+        })
+        .catch((erro) =>{
+            console.log(erro);
+            console.log(`Houve um erro ao realizar a verificação Erro: ${erro.sqlMessage}`);
+            res.status(500).json(erro.sqlMessage);
+        });
+    }
+
+   
+}
+
+function curtir(req,res){
+    const fkusu = req.body.fkUsu;
+    const fklivro = req.body.fkLivro;
+    const fkaut = req.body.fkAut;
+    
+    usuarioModel.curtir(fkusu, fklivro, fkaut)
+    .then((resultado) => {
+        res.json(resultado);
+    })
+    .catch((erro) =>{
+        console.log(erro);
+        console.log(`Houve um erro ao realizar a curtida Erro: ${erro.sqlMessage}`);
+        res.status(500).json(erro.sqlMessage);
+    });
+
+}
+
+function descurtir(req,res){
+    const fkusu = req.body.fkUsu;
+    const fklivro = req.body.fkLivro;
+    const fkaut = req.body.fkAut;
+
+    usuarioModel.descurtir(fkusu, fklivro, fkaut)
+    .then((resultado) => {
+        res.json(resultado);
+    })
+    .catch((erro) =>{
+        console.log(erro);
+        console.log(`Houve um erro ao realizar ao descurtir Erro: ${erro.sqlMessage}`);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
     entrar,
     cadastrar,
     atualizar,
-    sugerir
+    sugerir,
+    verificar_curtir,
+    curtir,
+    descurtir
 }

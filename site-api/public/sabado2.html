@@ -103,13 +103,121 @@
 
 </html>
 <script>
-    function curte() {
-        btn_curte.style.display = 'none';
-        btn_desurte.style.display = 'flex';
+
+    var nome = "Dos Bailes Para a Fama";
+    var aut = 1003;
+    var livro = 15;
+    verifica_curte();
+
+    function verifica_curte() {
+       
+
+        fetch(`usuario/verificar_curtir?idUsu=${sessionStorage.ID_USUARIO}&nomeLivro=${nome}`)
+
+        .then(function(res){
+         
+            if(res.ok)
+            {
+                res.json().then(function(resposta){
+                    for (var contador = 0; contador < resposta.length; contador++) {
+                        if(resposta[contador].nome == nome)
+                        {
+                            btn_curte.style.display = 'none';
+                            btn_desurte.style.display = 'flex';
+                        }
+                    }
+                })
+            }
+
+            else
+            {
+                console.error("nenhum dado encontrado!");
+            }
+        })
+
+        .catch(function(erro){
+
+            console.error("Erro ao captar a curtida: " + erro.message)
+        })
+    }
+
+    function curte(){
+        
+
+
+        fetch("usuario/curtir", {
+            method: "POST",
+                headers: {
+                    "Content-type" : "application/json"
+                },
+
+                body: JSON.stringify({
+                    
+                    fkUsu: sessionStorage.ID_USUARIO,
+                    fkLivro: livro,
+                    fkAut: aut
+                    
+
+                })
+            })
+
+        .then(function(res){
+            
+            if(res.ok)
+            {
+                btn_curte.style.display = 'none';
+                btn_desurte.style.display = 'flex';
+            }
+           
+            else
+            {
+                alert("erro ao curtir;");
+            }
+        })
+
+        .catch(function(erro){
+
+            console.error("Erro ao curtir: " + erro.message)
+        })
+
     }
 
     function desurte() {
-        btn_curte.style.display = 'Flex';
-        btn_desurte.style.display = 'none';
+
+        fetch("usuario/descurte", {
+            method: "POST",
+                headers: {
+                    "Content-type" : "application/json"
+                },
+
+                body: JSON.stringify({
+                    
+                    fkUsu: sessionStorage.ID_USUARIO,
+                    fkLivro: livro,
+                    fkAut: aut
+                    
+
+                })
+            })
+
+        .then(function(res){
+            
+            if(res.ok)
+            {
+                btn_curte.style.display = 'Flex';
+                btn_desurte.style.display = 'none';
+            }
+           
+            else
+            {
+                alert("erro ao descurtir;");
+            }
+        })
+
+        .catch(function(erro){
+
+            console.error("Erro ao curtir: " + erro.message)
+        })
+        
     }
 </script>

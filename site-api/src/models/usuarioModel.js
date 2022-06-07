@@ -8,16 +8,30 @@ function entrar(email, senha){
     return database.executar(comando);
 }
 
+function verificar_curtir(usu){
+   const comando = ` select fkusu as "Nome _e_Usuario", fkLivro as "Livro", curtir.fkAutor as "Autor", nome from curtir left join livro on fklivro = idlivro where fkUsu = ${usu};`;
+   return database.executar(comando); 
+}
+
+function curtir(fkusu, fklivro, fkaut){
+    const comando = `insert into curtir (fkusu, fkLivro, fkAutor) values (${fkusu}, ${fklivro}, ${fkaut});`;
+    console.log("Executando o comando: " + comando)
+    return database.executar(comando);
+}
+
+function descurtir(fkusu, fklivro, fkaut){
+    console.log(`acessei Acessei o usuarioModel. Function descurtir(${fkusu}, ${fklivro}, ${fkaut})`);
+    const comando = `delete from curtir where fkusu = ${fkusu} and fkLivro = ${fklivro} and fkAutor = ${fkaut}; `;
+    console.log(`Executando a instrução sql: ${comando}`);
+    return database.executar(comando);
+}
+
 function cadastrar(nome, usu, email, data, autor_fav, senha){
     console.log(`Acessei o usuarioModel. Function cadastrar(${nome}, ${usu}, ${email}, ${data}, ${autor_fav}, ${senha}`);
     const comando = `INSERT INTO Usuario (nome_completo, nome_usu, autor_fav, email, dataNasc, senha) VALUES ('${nome}', '${usu}', '${autor_fav}', '${email}', '${data}', '${senha}')`;
     
     console.log(`Executando a instrução SQL: ${comando}`);
     return database.executar(comando);
-}
-
-function curtir(){
-    console.log(`Acessei o usuarioModel. function curtir()`)
 }
 
 function atualizar(nome, nick, email, idUsuario){
@@ -40,5 +54,8 @@ module.exports = {
     entrar,
     cadastrar,
     atualizar,
-    sugerir
+    sugerir,
+    verificar_curtir,
+    curtir,
+    descurtir
 }

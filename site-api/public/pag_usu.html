@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,16 @@
     <link rel="icon" href="img/icone.png">
     <title>GoReads – Informações Sobre o usuario</title>
 </head>
+
 <body>
 
     <div class="container">
         <img src="img/icone_pag_usu.png" alt="" class="img_usu">
 
         <br> <br>
-        <h3>Seja bem vindo(a)</h3>
+        <h3>Seja bem vindo(a) <span id="nome_usu">aa</span></h3>
         <br> <br>
-        <b>Nome:</b>
+        <b>Nome: <span id="nome"></span></b>
         <br> <br>
         <b>Data de Nascimento:</b>
         <br> <br>
@@ -27,15 +29,15 @@
 
     <div class="container2">
         <div class="curte">
-      <center>
-          <h1>Obras Curtidas</h1>
-      </center>
+            <center>
+                <h1>Obras Curtidas</h1>
+            </center>
 
         </div>
         <div class="indica">
-        
-                <h1>Sugestões de Autores</h1>
-            
+
+            <h1>Sugestões de Autores</h1>
+
             Insira sua Sugestão aqui: <input type="text" id="ipt_insere" placeholder="Insira aqui...">
             <br> <br> <button onclick="insere()">Insere</button>
             <h2>Lista de Sugestões:</h2>
@@ -43,38 +45,39 @@
             <div id="div_msg"></div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 <script>
-   
+
     var sugestao = [];
 
-    function insere()
-    {
+    function insere() {
         div_msg.innerHTML = '';
 
-        if(ipt_insere.value == '')
-    {
-        alert("insira uma sugestão!");
-    }
+        if (ipt_insere.value == '') {
+            alert("insira uma sugestão!");
+        }
 
-    else
-    {
-        sugestao.push(ipt_insere.value);
-        ipt_insere.value = '';
+        else {
+            sugestao.push(ipt_insere.value);
+            ipt_insere.value = '';
 
-        for(var contador = 0; contador < sugestao.length; contador ++)
-        {
-            
-           div_msg.innerHTML += `${sugestao[contador]} <br>`
+            for (var contador = 0; contador < sugestao.length; contador++) {
+
+                div_msg.innerHTML += `${sugestao[contador]} <br>`
+            }
         }
     }
-    }
 
 
-    function volta()
-    {
+    function volta() {
         window.location = 'home.html';
     }
+</script>
+
+<script>
+nome_usu.innerHTML = sessionStorage.NICK;
+nome.innerHTML = sessionStorage.NOME_USUARIO;
 </script>
