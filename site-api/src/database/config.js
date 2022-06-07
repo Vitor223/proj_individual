@@ -2,9 +2,9 @@ const mysql = require("mysql2");
 
 const mySqlConfig = {
     host: 'localhost',
-    user: 'root',
+    user: 'aluno',
     database: 'goreads',
-    password: 'vitor2003',
+    password: 'sptech',
     port: 3306
 }
 

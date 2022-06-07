@@ -10,6 +10,7 @@ function entrar(email, senha){
 
 function verificar_curtir(usu){
    const comando = ` select fkusu as "Nome _e_Usuario", fkLivro as "Livro", curtir.fkAutor as "Autor", nome from curtir left join livro on fklivro = idlivro where fkUsu = ${usu};`;
+   console.log(comando);
    return database.executar(comando); 
 }
 
@@ -50,6 +51,17 @@ function sugerir(jogo, categoria, idUsuario){
     return database.executar(comando);
 }
 
+function mede(){
+    console.log("Acessei o usuarioModel. Function mede");
+    const comando = `select livro.nome, count(fklivro) as "quantidade_de_Curtidas"
+    from curtir 
+    right join livro on fklivro = idlivro
+    group by livro.nome
+    order by COUNT(fkLivro) desc limit 5;`;
+
+    return database.executar(comando);
+}
+
 module.exports = {
     entrar,
     cadastrar,
@@ -57,5 +69,6 @@ module.exports = {
     sugerir,
     verificar_curtir,
     curtir,
-    descurtir
+    descurtir,
+    mede
 }

@@ -16,15 +16,16 @@
         <img src="img/icone_pag_usu.png" alt="" class="img_usu">
 
         <br> <br>
-        <h3>Seja bem vindo(a) <span id="nome_usu">aa</span></h3>
+        <h3>Olá, <span id="nome_usu"></span></h3>
         <br> <br>
         <b>Nome: <span id="nome"></span></b>
         <br> <br>
-        <b>Data de Nascimento:</b>
-        <br> <br>
-        <b>Autor Favorito</b>
+        <b>Autor Favorito: <span id="fav"></span></b>
         <br> <br>
         <button onclick="volta()" id="btn_volta"><b>Voltar</b></button>
+        <br>
+        <br>
+        <button onclick="sair()" id="btn_sai"><b>Sair</b></button>
     </div>
 
     <div class="container2">
@@ -57,7 +58,7 @@
         div_msg.innerHTML = '';
 
         if (ipt_insere.value == '') {
-            alert("insira uma sugestão!");
+            alert("insira uma sugestão!"); 
         }
 
         else {
@@ -75,9 +76,14 @@
     function volta() {
         window.location = 'home.html';
     }
+
+    function sair(){
+        window.location = 'index.html';
+    }
 </script>
 
 <script>
 nome_usu.innerHTML = sessionStorage.NICK;
 nome.innerHTML = sessionStorage.NOME_USUARIO;
+fav.innerHTML = sessionStorage.AUTOR;
 </script>

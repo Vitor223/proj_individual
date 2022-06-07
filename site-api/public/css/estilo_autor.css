@@ -235,13 +235,43 @@ h1
 }
 
 
+.container2
+{
+    width: 100vw;
+    height: 70vh;
+    background-color: #c91a26;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    align-items: center;
+    text-align: center;
+}
+
+.qtd_vota
+{
+    margin-left: 50px;
+}
+
+h2
+{
+    font-family: 'Quicksand';
+}
+
+.segurinha
+{
+    display: flex;
+}
+
+
+
 /* fim do corpo */
 
 
 
 footer
 {
-    height: 15vh;
+    height: 17vh;
     width: 100vw;
     background-color: black;
     margin-top: 60px;

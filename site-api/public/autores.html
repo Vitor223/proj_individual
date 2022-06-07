@@ -69,6 +69,21 @@
     </div>
    </div>
 
+   <div class="container2">
+       <h1>Ranking de Livros</h1>
+    <div class="segurinha">
+        <div class="nome_livro">
+            <h2>Nome do Livro</h2>
+            <span id="medida_nome"></span>
+        </div>
+        <div class="qtd_vota">
+            <h2>Quantidade de Curtidas</h2>
+            <span id="medida"></span>
+        </div>
+    </div>
+       
+   </div>
+
    <footer>
     <br> 
     Desenvolvido Por:
@@ -78,3 +93,31 @@
 </footer>  
 </body>
 </html>
+<script>
+      fetch(`usuario/mede`)
+
+.then(function(res){
+    if(res.ok)
+    {
+        res.json().then(function(resposta){
+
+            for (let contador = 0; contador < resposta.length; contador++) {
+               medida_nome.innerHTML += `<p>${resposta[contador].nome}<br></p>`;
+                medida.innerHTML += `<p>${resposta[contador].quantidade_de_Curtidas} <br></p>`
+            }
+            console.log(resposta);
+            
+        })
+    }
+
+    else
+    {
+        console.error("nenhum dado encontrado!");
+    }
+})
+
+.catch(function(erro){
+
+    console.error("Erro ao captar a curtida: " + erro.message)
+})
+</script>

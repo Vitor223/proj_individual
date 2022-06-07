@@ -89,10 +89,11 @@
                         console.log(JSON.stringify(json));
 
                         sessionStorage.EMAIL_USUARIO = json.email;
-                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.NOME_USUARIO = json.nome_completo;
                         sessionStorage.ID_USUARIO = json.idUsuario;
                         sessionStorage.NICK = json.nome_usu;
-
+                        sessionStorage.DATA = json.dataNasc;
+                        sessionStorage.AUTOR = json.autor_fav;
                         window.location = "home.html";
                     });
                 }

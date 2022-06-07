@@ -31,5 +31,10 @@ router.post("/curtir", function(req, res) {
 router.post("/descurte", function(req, res){
     usuarioController.descurtir(req, res);
 })
+
+router.get("/mede", function(req,res){
+    usuarioController.mede(req,res)
+}) 
+
 module.exports = router;
 
